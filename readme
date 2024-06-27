@@ -1,0 +1,103 @@
+Analysis of Factors Influencing Used Car Prices
+-----------------------------------------------
+
+Objective The primary goal of our data analysis was to identify the key factors influencing used car prices. By understanding what makes a car more or less expensive, we aimed to provide clear recommendations to our client for fine-tuning their inventory.
+
+Best Model Selection:
+---------------------
+The Random Forest Regression model with hyperparameter tuning using GridSearchCV emerged as the best choice among the six models tested.
+The selected hyperparameters (e.g., max_depth, min_samples_split, and n_estimators) contribute to achieving the lowest error estimators (mean squared error, mean absolute error, and R2 score).
+Notably, the selected hyperparameters were:
+max_depth: None
+min_samples_split: 2
+n_estimators: 200
+An R2 score of 0.82 indicates that your model captures around 82% of the variance in used car prices, which is quite promising.
+The prediction estimates provide a nice correlation between the actual and predicted values and the Error has a normal distribution, centered around the mean
+
+Feature Importance:
+--------------------
+The key features that significantly influence used car prices, according to the Random Forest model, include:
+“fuel,” “manufacturer,” “type,” “cylinders,” “drive,” “year,” and “odometer.”
+These features align with what customers value when purchasing a used car, and the permutation importance confirms their impact.
+
+Other Observations:
+-------------------
+Odometer reading and year of manufacture strongly correlate with price, as expected.
+Specific attributes, such as trucks (e.g., RAM), high-cylinder engines, diesel vehicles, and electric cars, impact price margins.
+
+Data Cleanup and Challenges:
+----------------------------
+Handling null values and ensuring a cleaner dataset are essential steps. While some nulls were dropped, further improvements could enhance prediction accuracy.
+Mismatched fields (e.g., inconsistent values) may stem from input data quality. Ideally, starting with clean data would yield better results.
+
+
+Deployment Strategy
+--------------------
+Abstract Our analysis aims to provide valuable insights for used car dealers seeking to fine-tune their inventory. By understanding customer preferences and the factors influencing used car prices, we can optimize stock selection and pricing strategies.
+
+Key Findings
+
+1. Best Model Selection
+-----------------------
+After evaluating six models, the Random Forest Regression model with hyperparameter tuning using GridSearchCV emerged as the top performer.
+Selected hyperparameters:
+max_depth: None
+min_samples_split: 2
+n_estimators: 200
+An impressive R2 score of 0.82 indicates that our model captures approximately 82% of the variance in used car prices.
+
+2. Feature Importance
+----------------------
+The following features significantly influence used car prices:
+Fuel type: Customers show preferences for specific fuel types (e.g., gas, diesel, electric).
+Manufacturer: Brand reputation impacts pricing.
+Car type: Sedans, SUVs, and trucks have varying price ranges.
+Number of cylinders: High-cylinder engines affect prices.
+Drive type: All-wheel drive (AWD) or front-wheel drive (FWD) matters.
+Year of manufacture: Newer cars tend to command higher prices.
+Odometer reading: Mileage directly impacts value.
+
+3. Other Observations
+----------------------
+Odometer and Year: As expected, odometer reading and year of manufacture strongly correlate with price. Low mileage and recent models are desirable.
+Specific Attributes: Certain attributes affect price margins:
+Trucks (e.g., RAM) tend to be pricier.
+High-cylinder engines may increase costs.
+Diesel vehicles and electric cars have distinct pricing patterns.
+
+4. Recommendations
+-------------------
+Inventory Selection:
+Stock popular brands and models based on customer preferences.
+Prioritize low-mileage, newer vehicles.
+Consider offering a mix of fuel types to cater to diverse buyers.
+
+Pricing Strategies:
+Adjust prices based on features (e.g., AWD, cylinders).
+Highlight unique attributes (e.g., electric drivetrain) to justify higher prices.
+
+Data Quality:
+Continuously clean and update your dataset to improve prediction accuracy.
+Address null values and inconsistencies.
+Understanding customer preferences and aligning inventory with market demand will enhance customer success
+
+GITLAB Link to notebook
+------------------------
+
+The notebook is in https://github.com/jaigetsback/ucp
+-- ucp_jaik.ipynb
+
+The data for the analysis is in
+-- https://github.com/jaigetsback/ucp/data/vehicles.csv
+
+Note: Please change the CSV location in the ucp_jaik.ipynb notebook to point to the githiub location (https://github.com/jaigetsback/ucp/data/vehicles.csv) above for 
+analysis.
+
+Please fix the following lines in prompt.ipynb as needed to read the CSV for the project 
+df = pd.read_csv('/Users/jaikumar/Desktop/used_car_selection/data/coupons.csv') to 
+df = pd.read_csv('https://github.com/jaigetsback/ucp/data/vehicles.csv')
+
+
+
+
+
