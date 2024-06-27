@@ -1,7 +1,7 @@
 Analysis of Factors Influencing Used Car Prices
 -----------------------------------------------
 
-Objective The primary goal of our data analysis was to identify the key factors influencing used car prices. By understanding what makes a car more or less expensive, we aimed to provide clear recommendations to our client for fine-tuning their inventory.
+Objective: The primary goal of our data analysis was to identify the key factors influencing used car prices. By understanding what makes a car more or less expensive, we aimed to provide clear recommendations to our client for fine-tuning their inventory.
 
 Best Model Selection:
 ---------------------
@@ -33,9 +33,10 @@ Mismatched fields (e.g., inconsistent values) may stem from input data quality. 
 
 Deployment Strategy
 --------------------
-Abstract Our analysis aims to provide valuable insights for used car dealers seeking to fine-tune their inventory. By understanding customer preferences and the factors influencing used car prices, we can optimize stock selection and pricing strategies.
+Abstract: Our analysis aims to provide valuable insights for used car dealers seeking to fine-tune their inventory. By understanding customer preferences and the factors influencing used car prices, we can optimize stock selection and pricing strategies.
 
 Key Findings
+-------------
 
 1. Best Model Selection
 -----------------------
